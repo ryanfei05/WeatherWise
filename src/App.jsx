@@ -15,7 +15,7 @@ function App() {
 
   const search = evt => {
     if (evt.key === "Enter") {
-      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${api.key}`)
+      fetch(`${api.base}weather?q=${query}&units=metric&APPID=${apiKey}`)
         .then(res => res.json())
         .then(result => {
           setWeather(result);
@@ -68,7 +68,7 @@ function App() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setCurrentTime(new Date());
-    }, 10000);
+    }, 1000);
 
     return () => clearInterval(intervalId);
   }, []); 
