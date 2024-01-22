@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from 'react'
 
+const apiKey = import.meta.env.VITE_REACT_APP_API_KEY;
+
+
 const api = {
-  key: 'b67f7a44821683ce4c5677582022bc7e',
+  key: apiKey,
   base: "https://api.openweathermap.org/data/2.5/"
 }
 
